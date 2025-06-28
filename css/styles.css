@@ -115,7 +115,7 @@ header {
 
 .carousel {
   width: 100vw;
-  height: 70vh;
+  height: 50vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -127,7 +127,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   animation: slide 12s infinite;
 }
@@ -147,38 +147,14 @@ header {
   100% { transform: translateX(0%); }
 }
 
-.hero-overlay {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2em;
-  border-radius: 10px;
-  color: white;
-  text-align: center;
-  z-index: 1;
-}
 
-/* Botón principal */
-.btn-cita {
-  display: inline-block;
-  margin-top: 1.5em;
-  background: var(--primary);
-  color: white;
-  padding: 0.75em 1.5em;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 8px var(--shadow);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
 
-.btn-cita:hover {
-  background: orangered;
-  transform: scale(1.05);
-}
 
-/* ==============================
-   SECCIONES GENERALES
-================================ */
+
+
+
+
+/* SECCIONES GENERALES */
 section {
   padding: 3em 1.5em;
   max-width: 1500px;
@@ -199,30 +175,71 @@ h2 {
   margin-bottom: 1em;
   text-align: center;
   font-size: 1.05em;
+  justify-content:center;
+  
+
+
+  
 }
+
+
+.ubicacion{
+  
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 2px solid  orangered;
+  width: 800px;
+  height: 450px;
+ 
+  margin-bottom: 15px;
+
+  }
+
 
 /* ==============================
    SERVICIOS
 ================================ */
-.servicios ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1em;
-  padding: 0;
+
+
+
+
+/* Galería con centrado */
+.image-galery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem 1rem;
+  flex-wrap: wrap; /* para que sea responsive */
+
 }
 
-.servicios li {
-  background: var(--gray);
-  padding: 1em;
-  border-left: 5px solid var(--primary);
-  border-radius: 8px;
-  transition: transform 0.2s;
+/* Cada imagen con su título */
+
+.image-card {
+  text-align: center;
+  max-width: 400px;
+  
 }
 
-.servicios li:hover {
-  transform: translateY(-5px);
+/* Estilo de las imágenes */
+.image-card img {
+  
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: #5c7cfa;
 }
+
+/* Título de la imagen */
+.image-title {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
 
 /* ==============================
    CONTACTO
