@@ -10,7 +10,7 @@
   --shadow: rgba(0, 0, 0, 0.05);
 }
 
-/* RESET */
+/* INICIO */
 
 * {
   margin: 0;
@@ -170,18 +170,51 @@ h2 {
 }
 
 /* Quiénes somos y Sede */
-.quienes-somos p,
+
+.dos-columnas {
+  display: flex;
+  flex-wrap: wrap; /* Para que sea responsive en móviles */
+  gap: 40px;
+  padding: 40px 20px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.columna {
+  flex: 1;
+  min-width: 280px;
+}
+
+.columna.texto h2 {
+  font-size: 2rem;
+  color: #ff6600;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.columna.texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.columna.imagen img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 .sede p {
+  
   margin-bottom: 1em;
   text-align: center;
+
   font-size: 1.05em;
   justify-content:center;
   
-
-
-  
 }
-
 
 .ubicacion{
   
@@ -197,13 +230,6 @@ h2 {
   }
 
 
-/* ==============================
-   SERVICIOS
-================================ */
-
-
-
-
 /* Galería con centrado */
 .image-galery {
   display: flex;
@@ -215,30 +241,27 @@ h2 {
 
 }
 
-/* Cada imagen con su título */
-
-.image-card {
-  text-align: center;
-  max-width: 400px;
-  
-}
 
 /* Estilo de las imágenes */
 .image-card img {
-  
   width: 100%;
   height: auto;
   border-radius: 10px;
   border: #5c7cfa;
+  transition: transform 0.5s ease;
 }
 
-/* Título de la imagen */
-.image-title {
-  margin-top: 0.75rem;
-  font-size: 1.1rem;
-  color: #333;
+/* Efecto hover con movimiento */
+.image-card:hover img {
+  transform: scale(1.05);
 }
 
+
+.image-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 
 /* ==============================
