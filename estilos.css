@@ -1,4 +1,7 @@
-/* VARIABLES */
+/* ==============================
+   VARIABLES
+================================ */
+
 
 :root {
   --primary: #fe5f0a;
@@ -8,7 +11,11 @@
   --gray: #f5f5f5;
   --text: #444;
   --shadow: rgba(0, 0, 0, 0.05);
+  /* TIPOGRAFÍA */
+--font-principal: 'Poppins', sans-serif;
+--font-size-sm: 1.3rem;
 }
+
 
 /* RESET */
 
@@ -18,8 +25,9 @@
   box-sizing: border-box;
 }
 
+
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-principal);
   background: var(--light);
   color: var(--text);
   line-height: 1.7;
@@ -29,6 +37,7 @@ body {
 span {
   color: var(--gray);
 }
+
 
 /* HEADER */
 
@@ -50,7 +59,10 @@ header {
   color: var(--dark);
 }
 
-/* NAVBAR */
+
+/* ==============================
+   NAVBAR
+================================ */
 
 .navbar {
   display: flex;
@@ -63,13 +75,12 @@ header {
 }
 
 .logo {
-  height: 150px;
-  margin-right: 1.5em;
-  margin-left: 10.5em;
-  object-fit: contain;
+     
+         height: 180px;
+         margin-right: 1.5em;
+         margin-left: 10.5em;
+         object-fit: contain;
 }
-
-/* MENÚ */
 
 .menu-toggle {
   display: none;
@@ -102,17 +113,20 @@ header {
 }
 
 .menu li a.active {
-  background: #fe5f0a;
+  background: var(--primary);
   color: white;
 }
 
-.menu li a:hover{
+.menu li a:hover {
   background: orangered;
   transform: scale(1.05);
-  color: #f5f5f5;
+  color: var(--gray);
 }
 
-/* BANNER PRINCIPAL*/
+
+/* ==============================
+   BANNER PRINCIPAL (CAROUSEL)
+================================ */
 
 .carousel {
   width: 100vw;
@@ -149,7 +163,10 @@ header {
 }
 
 
-/* SECCIONES GENERALES */
+/* ==============================
+   SECCIONES GENERALES
+================================ */
+
 section {
   padding: 3em 1.5em;
   max-width: 1500px;
@@ -157,12 +174,18 @@ section {
 }
 
 h2 {
-  color: orangered;
+  color: var(--primary);
   margin-bottom: 1em;
   font-weight: 700;
   font-size: 1.6em;
   text-align: center;
 }
+
+
+/* ==============================
+   QUIÉNES SOMOS & SEDE
+================================ */
+
 
 /* Quiénes somos y Sede */
 
@@ -173,90 +196,86 @@ h2 {
   padding: 40px 20px;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 10%;
+    
+  .columna {
+      flex: 1;
+      min-width: 280px;
+      }
+  
+  .columna.texto h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-align: left;
+
+  .columna.texto p {
+      font-size: var(--font-size-sm);
+      line-height: 1.6;
+      color: #333;
+      text-align: justify;
+}
+   
+
 }
 
-.columna {
-  flex: 1;
-  min-width: 280px;
+    .columna.imagen img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.columna.texto h2 {
-  font-size: 2rem;
-  color: #ff6600;
-  margin-bottom: 20px;
-  text-align: left;
+
 }
 
-.columna.texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-}
 
-.columna.imagen img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+
+
 
 .sede p {
-  
   margin-bottom: 1em;
   text-align: center;
-
   font-size: 1.05em;
-  justify-content:center;
-  
 }
 
-.ubicacion{
-  
+.ubicacion {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
   border-radius: 8px;
-  border: 2px solid  orangered;
+  border: 2px solid var(--primary);
   width: 800px;
   height: 450px;
- 
-  margin-bottom: 15px;
-
-  }
+}
 
 
-/* SERVICIOS GALERIA */
+/* ==============================
+   SERVICIOS (GALERÍA)
+================================ */
+
 .image-galery {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
-  padding: 1rem 1rem;
-  flex-wrap: wrap; /* para que sea responsive */
-
+  padding: 1rem;
+  flex-wrap: wrap;
 }
-
-/* Cada imagen con su título */
 
 .image-card {
   text-align: center;
   max-width: 400px;
 }
 
-/* Estilo de las imágenes */
 .image-card img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  border: #5c7cfa;
   transition: transform 0.5s ease;
 }
 
-/* Efecto hover con movimiento */
 .image-card:hover img {
   transform: scale(1.05);
 }
-
 
 .image-card:hover {
   transform: translateY(-5px);
@@ -265,7 +284,10 @@ h2 {
 }
 
 
-/* CONTACTO*/
+/* ==============================
+   CONTACTO
+================================ */
+
 .contacto form {
   display: grid;
   gap: 1em;
@@ -305,7 +327,11 @@ h2 {
   transform: scale(1.03);
 }
 
-/*  FOOTER */
+
+/* ==============================
+   FOOTER
+================================ */
+
 .footer {
   background-color: #373435;
   color: white;
@@ -379,31 +405,74 @@ h2 {
   color: #ccc;
 }
 
+
 /* ==============================
    RESPONSIVE
 ================================ */
-@media (max-width: 768px) {
-  /* Navbar */
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: var(--light);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    border-top: 1px solid #ccc;
-    padding: 1em 0;
-    z-index: 9;
+
+@media (max-width: 480px) {
+   .logo {
+    margin: auto;
+  
+    height: 200px;
   }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+  
+ .logo {
+    margin: auto;
+  
+    height: 200px;
+  }
+
+
+.menu li a {
+  background: var(--primary);
+  color: white;
+  margin: 0.5em auto;
+  width: 200%;
+   margin-top: 0.5em;
+   padding: 0.5em 1em;
+  text-align: center;
+}
+.menu li a:hover {
+  background: var(--secondary);
+  transform: scale(1.03);
+}
+  .menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: var(--light);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  padding: 1em 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
 
   .menu.open {
     display: flex;
+    background: rgba(193, 136, 90, 0.9); /* blanco con 90% opacidad */
+    backdrop-filter: blur(1px);
   }
 
   .menu-toggle {
-    display: block;
-  }
+  display: block;
+  font-size: 1.8em;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
 
   nav {
     flex-direction: column;
@@ -417,7 +486,6 @@ h2 {
     gap: 0.5em;
   }
 
-  /* Footer */
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -428,4 +496,37 @@ h2 {
   .footer-logo {
     flex: 1 1 100%;
   }
+
+  .ubicacion {
+    width: 100%;
+    height: 300px;
+  }
+
+
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
+  .carousel {
+    height: 30vh;
+  }
+  
+
+  .slides {
+    height: 70%;
+  }
+
+  .columna.texto h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .columna.texto p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+
